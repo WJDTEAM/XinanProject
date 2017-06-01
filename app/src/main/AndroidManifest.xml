@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+          xmlns:tools="http://schemas.android.com/tools"
+          package="tqm.bianfeng.com.xinanproject">
+
+
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+    <uses-permission android:name="android.permission.READ_LOGS"/>
+    <uses-permission android:name="android.permission.CALL_PHONE"/>
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+    <uses-permission android:name="android.permission.GET_TASKS"/>
+    <uses-permission android:name="android.permission.INSTALL_PACKAGES" />
+
+    <uses-permission android:name="android.permission.CAMERA"/>
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE"/>
+    <!--<uses-sdk-->
+    <!--tools:overrideLibrary="com.umeng.socialize.evernote,com.umeng.socialize.pinterest"-->
+    <!--/>-->
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <!-- 在sd卡中创建与删除文件权限 -->
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"
+                     />
+
+    <uses-permission android:name="android.permission.CAMERA"/>
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.FLASHLIGHT" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:name=".Base.BaseApplication"
+        android:screenOrientation="portrait"
+        tools:replace="icon"
+        android:theme="@style/AppTheme">
+        <activity android:name=".MainActivity"
+                  android:launchMode="singleTask"
+                  android:screenOrientation="portrait"
+                  android:windowSoftInputMode="adjustPan|stateHidden">
+
+        </activity>
+        <activity android:name=".Activity.WelcomeActivity"
+                  android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+        <activity android:name=".Activity.EPActivity"
+                  android:launchMode="singleTask"
+                  android:screenOrientation="portrait"
+                  android:windowSoftInputMode="adjustPan|stateHidden"/>
+        <activity android:name=".Activity.NewsActivity"
+                  android:launchMode="singleTask"
+                  android:screenOrientation="portrait"
+                  android:windowSoftInputMode="adjustPan|stateHidden"/>
+        <activity android:name=".Activity.HotNewsActivity"
+                  android:launchMode="singleTask"
+                  android:screenOrientation="portrait"
+                  android:windowSoftInputMode="adjustPan|stateHidden">
+
+
+        </activity>
+
+        <activity android:name=".Activity.DialogActivity"
+                  android:launchMode="singleTask"
+                  android:screenOrientation="portrait"
+                  android:windowSoftInputMode="adjustPan|stateHidden">
+
+
+        </activity>
+        <!--景区天气列表-->
+        <activity android:name=".travel.TravelWeatherListActivity"
+                  android:launchMode="singleTask"
+                  android:screenOrientation="portrait"
+                  android:windowSoftInputMode="adjustPan|stateHidden">
+
+
+        </activity>
+        <!--景区流量列表-->
+        <activity android:name=".travel.TravelTouristsNumListActivity"
+                  android:launchMode="singleTask"
+                  android:screenOrientation="portrait"
+                  android:windowSoftInputMode="adjustPan|stateHidden">
+
+
+        </activity>
+        <!--基础设施统计-->
+        <activity android:name=".travel.TravelInfrastructureActivity"
+                  android:launchMode="singleTask"
+                  android:screenOrientation="portrait"
+                  android:windowSoftInputMode="adjustPan|stateHidden">
+
+
+        </activity>
+        <!--景区月流量统计-->
+        <activity android:name=".travel.TravelMonthTrafficActivity"
+                  android:launchMode="singleTask"
+                  android:screenOrientation="portrait"
+                  android:windowSoftInputMode="adjustPan|stateHidden">
+
+
+        </activity>
+        <!--景区饱和度-->
+        <activity android:name=".travel.TravelSaturationActivity"
+                  android:launchMode="singleTask"
+                  android:screenOrientation="portrait"
+                  android:windowSoftInputMode="adjustPan|stateHidden">
+        </activity>
+        <!--游客来源分布-->
+        <activity android:name=".travel.TravelSourceDistributionActivity"
+                  android:launchMode="singleTask"
+                  android:screenOrientation="portrait"
+                  android:windowSoftInputMode="adjustPan|stateHidden">
+        </activity>
+        <!--电商交易统计-->
+        <activity android:name=".travel.TravelTradingActivity"
+                  android:launchMode="singleTask"
+                  android:screenOrientation="portrait"
+                  android:windowSoftInputMode="adjustPan|stateHidden">
+        </activity>
+        <!--微信关注统计-->
+        <activity android:name=".travel.TravelWeiXinFocusActivity"
+                  android:launchMode="singleTask"
+                  android:screenOrientation="portrait"
+                  android:windowSoftInputMode="adjustPan|stateHidden">
+        </activity>
+        <!--智慧城管-->
+        <activity android:name=".chengguan.ChengGuanActivity"
+                  android:launchMode="singleTask"
+                  android:screenOrientation="portrait"
+                  android:windowSoftInputMode="adjustPan|stateHidden">
+
+
+        </activity>
+        <!--智慧矿山-->
+        <activity android:name=".Kuangshan.KuangShanActivity"
+                  android:launchMode="singleTask"
+                  android:screenOrientation="portrait"
+                  android:windowSoftInputMode="adjustPan|stateHidden">
+
+
+        </activity>
+        <!--智慧环保-->
+        <activity android:name=".EvnPro.EvnProActivity"
+                  android:launchMode="singleTask"
+                  android:screenOrientation="portrait"
+                  android:windowSoftInputMode="adjustPan|stateHidden">
+
+
+        </activity>
+        <!--反馈-->
+        <activity android:name=".user.UserFeedbackActivity"
+                  android:launchMode="singleTask"
+                  android:screenOrientation="portrait"
+                  android:windowSoftInputMode="adjustPan|stateHidden">
+
+
+        </activity>
+        <!--公共服务电话-->
+        <activity android:name=".contact.ContactActivity"
+                  android:launchMode="singleTask"
+                  android:screenOrientation="portrait"
+                  android:windowSoftInputMode="adjustPan|stateHidden">
+
+
+        </activity>
+        <activity android:name=".Activity.TravelActivity"
+                  android:launchMode="singleTask"
+                  android:screenOrientation="portrait"
+                  android:windowSoftInputMode="adjustPan|stateHidden">
+
+
+        </activity>
+
+        <!--二维码扫描-->
+        <activity
+            android:name=".zxing.activity.CaptureActivity"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Black.NoTitleBar" />
+        <activity
+            android:name=".zxing.activity.ResultActivity"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Black.NoTitleBar" />
+
+    </application>
+
+</manifest>

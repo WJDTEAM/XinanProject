@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
+    <include layout="@layout/default_toolbar"/>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/hugehxxxxxxxdp"
+        android:scaleType="fitXY"
+        android:src="@drawable/xa1_03"
+        />
+    <TextView
+        android:id="@+id/scenic_spot_name_txt"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/bigxmdp"
+        android:background="@color/white"
+        android:gravity="center"
+        android:textColor="@color/blue_text"
+        android:textSize="@dimen/mediumsp"
+        android:text="电商平台6月交易量统计"
+        />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <lecho.lib.hellocharts.view.PieChartView
+            android:id="@+id/pie_chart"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="@dimen/hugehxxxxxxxxxdp"
+            android:layout_gravity="center">
+        </lecho.lib.hellocharts.view.PieChartView>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            >
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/tinyhdp"
+                android:layout_marginTop="@dimen/mediummdp"
+                android:text="总交易量：0"
+                android:textSize="@dimen/mediumsp"
+                android:textColor="@color/font_black_2"
+                android:paddingLeft="@dimen/activity_horizontal_margin"
+                />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/tinyhdp"
+                android:text="总交易额：0"
+                android:textSize="@dimen/mediumsp"
+                android:textColor="@color/font_black_2"
+                android:paddingLeft="@dimen/activity_horizontal_margin"
+                />
+
+            <lecho.lib.hellocharts.view.ColumnChartView
+                android:id="@+id/chart"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:paddingTop="@dimen/tinymdp"
+                android:layout_margin="@dimen/mediummxdp"
+                android:layout_weight="1" >
+            </lecho.lib.hellocharts.view.ColumnChartView>
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+
+
+</LinearLayout>

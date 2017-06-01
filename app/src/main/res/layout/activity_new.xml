@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/hugehdp"
+        android:background="@color/colorPrimary"
+        android:fitsSystemWindows="true"
+        android:gravity="center_vertical"
+        android:minHeight="@dimen/mediumhdp"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="全市林业生态行动工作现场会\n在我县召开"
+                android:textSize="@dimen/mediumxsp"
+                android:gravity="center"
+                android:textColor="@color/black"
+                android:padding="@dimen/activity_horizontal_margin"
+                />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/mediummxdp"
+                android:textColor="@color/font_black_2"
+                android:text="2017-03-14"
+                android:textSize="@dimen/smallsp"
+                />
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:adjustViewBounds="true"
+                android:src="@drawable/banner02"
+                android:layout_margin="@dimen/mediummdp"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/mediumsp"
+                android:textColor="@color/black"
+                android:paddingLeft="@dimen/mediummxdp"
+                android:paddingRight="@dimen/mediummxdp"
+                android:layout_marginBottom="@dimen/bigmdp"
+                android:text="     省委常委、常务副省长黄莉新一行在魏国强、王天琦等市领导陪同下，实地考察宿迁电子商务产业园区。
+\n      3月14日上午，全市林业生态行动工作现场会在我县召开，副市长娄会峰带领全市各县区及林业、财政、交通等部门负责人，到我县观摩林业生态建设工作开展情况。县领导郅书安、薛万超陪同。 娄会峰一行实地查看了连霍高速新安西收费站绿化项目、枕头山公园、陇海铁路城关镇火虫驿段绿化项目，并详细听取工作汇报。 在随后召开的座谈会上，副县长薛万超代表我县做典型发言。 近年来，我县牢固树立“青山绿水就是金山银山”的绿色发展理念，着力在提升人均绿地面积上下功夫，大理推进全域绿化，强力推进河流两岸、主要交通干线、高速出入口等绿化工程。去冬今春我县林业生态建设任务包括廊道绿化和年度林业生态建设工程两部分，其中廊道绿化任务11760亩，年度林业生态建设工程任务101950亩。截至目前，廊道绿化工程已完成新造林11580亩，其中市级廊道绿化工程全部完成，县级廊道绿化工程3月20日前全部完成；林业生态建设工程已完成人工造林1.3万亩，抚育改造3.5万亩。 娄会峰对我县林业生态建设工作给予充分肯定，就下步全市工作开展，娄会峰强调，要高度重视，迅速掀起新一轮生态造林的高潮，抓住当前有利时机植树造林；要坚持问题导向，利用有效时间补齐短板；对于已完成的造林工程，要加强后期管护，确保成活率；要加强督导检查，以高度的责任感、使命感，抓实抓好这项工作，确保3月底前完成林业生态建设任务。 （杨洋）"/>
+
+        </LinearLayout>
+
+    </ScrollView>
+</LinearLayout>

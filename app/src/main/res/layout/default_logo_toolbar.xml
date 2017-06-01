@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content">
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/hugehdp"
+        android:background="@color/ep_orange"
+        android:fitsSystemWindows="true"
+        android:gravity="center_vertical"
+        android:minHeight="@dimen/mediumhdp"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginRight="@dimen/mediumxhdp"
+            >
+
+            <ImageView
+                android:id="@+id/logo_img"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_centerInParent="true"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="@dimen/tinymdp"
+                android:adjustViewBounds="true"
+                android:gravity="center_horizontal"
+                android:paddingBottom="@dimen/smallmdp"
+                android:paddingTop="@dimen/smallmdp"
+                android:scaleType="fitXY"
+                android:src="@drawable/ic_travel_logo"
+                />
+        </RelativeLayout>
+    </android.support.v7.widget.Toolbar>
+</LinearLayout>

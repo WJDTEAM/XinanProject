@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
+
+    <include layout="@layout/default_logo_toolbar"/>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:adjustViewBounds="true"
+        android:scaleType="fitXY"
+        android:src="@drawable/kuangshan_top_bg"
+        />
+
+    <FrameLayout
+        android:id="@+id/contiar"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/smallhdp"
+        android:orientation="horizontal"
+        >
+        <LinearLayout
+            android:id="@+id/address_lin"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:background="@drawable/ks_botton_sel"
+            android:layout_marginLeft="@dimen/tinymdp">
+
+            <ImageView
+                android:layout_width="@dimen/bigmdp"
+                android:layout_height="@dimen/bigmdp"
+                android:clickable="true"
+                android:src="@drawable/ic_kuangshan_add"
+                android:layout_gravity="center"
+                android:layout_marginLeft="@dimen/tinymdp"
+                />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="监测地址"
+                android:lines="1"
+                android:textColor="@drawable/ep_text_color_selector"
+                android:textSize="@dimen/smallsp"
+                />
+
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/data_lin"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:background="@drawable/ks_botton_sel"
+            android:layout_marginLeft="@dimen/tinymdp">
+
+            <ImageView
+                android:layout_width="@dimen/bigmdp"
+                android:layout_height="@dimen/bigmdp"
+                android:clickable="true"
+                android:src="@drawable/ic_kuangshan_data"
+                android:layout_gravity="center"
+                android:layout_marginLeft="@dimen/tinymdp"
+                />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="监测数据"
+                android:textColor="@drawable/ep_text_color_selector"
+                android:textSize="@dimen/smallsp"
+                />
+
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/message_lin"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:background="@drawable/ks_botton_sel"
+            android:layout_marginLeft="@dimen/tinymdp">
+
+            <ImageView
+                android:layout_width="@dimen/bigmdp"
+                android:layout_height="@dimen/bigmdp"
+                android:clickable="true"
+                android:src="@drawable/ic_kuangshan_msg"
+                android:layout_gravity="center"
+                android:layout_marginLeft="@dimen/tinymdp"
+                />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="消息中心"
+                android:textColor="@drawable/ep_text_color_selector"
+                android:textSize="@dimen/smallsp"
+                />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

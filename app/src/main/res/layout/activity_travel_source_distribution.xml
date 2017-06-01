@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
+    <include layout="@layout/default_toolbar"/>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/hugehxxxxxxxdp"
+        android:scaleType="fitXY"
+        android:src="@drawable/xa1_03"
+        />
+
+    <RadioGroup
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/smallhdp"
+        android:orientation="horizontal">
+        <RadioButton
+            android:id="@+id/pie_radio"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:background="@drawable/sd_radio_bg_shap"
+            android:button="@null"
+            android:checked="true"
+            android:text="旅游人数详细分布"
+            android:textSize="@dimen/mediumsp"
+            android:gravity="center"
+            android:textColor="@drawable/apply_for_text_color_selector"
+            />
+        <RadioButton
+            android:id="@+id/chart_radio"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:button="@null"
+            android:background="@drawable/sd_radio_bg_shap"
+            android:text="旅游人数比例分析"
+            android:textSize="@dimen/mediumsp"
+            android:gravity="center"
+            android:textColor="@drawable/apply_for_text_color_selector"
+            />
+    </RadioGroup>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <LinearLayout
+            android:id="@+id/pie_lin"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+                <lecho.lib.hellocharts.view.PieChartView
+                    android:id="@+id/pie_chart"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="match_parent" >
+                </lecho.lib.hellocharts.view.PieChartView>
+
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/pie_list"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content">
+
+                </android.support.v7.widget.RecyclerView>
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/activity_horizontal_margin"
+                android:textColor="@color/font_black_2"
+                android:gravity="center"
+                android:textSize="@dimen/mediumsp"
+                android:text="此处统计比例占前十的区域分布，\n后二十五个行政区域统计为其他"
+                />
+
+        </LinearLayout>
+
+
+        <lecho.lib.hellocharts.view.ColumnChartView
+            android:id="@+id/chart"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone"
+            android:layout_margin="@dimen/activity_horizontal_margin" >
+        </lecho.lib.hellocharts.view.ColumnChartView>
+
+
+
+    </RelativeLayout>
+
+
+</LinearLayout>

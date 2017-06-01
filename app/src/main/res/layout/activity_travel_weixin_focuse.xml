@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
+
+    <include layout="@layout/default_toolbar" />
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/hugehxxxxxxxdp"
+        android:scaleType="fitXY"
+        android:src="@drawable/xa1_03"
+        />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/tinyhdp"
+        android:layout_marginTop="@dimen/mediummdp"
+        android:text="微信关注量：1312"
+        android:textSize="@dimen/mediumsp"
+        android:textColor="@color/font_black_2"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/tinyhdp"
+        android:text="新增人数：1"
+        android:textSize="@dimen/mediumsp"
+        android:textColor="@color/font_black_2"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        />
+
+    <lecho.lib.hellocharts.view.PieChartView
+        android:id="@+id/pie_chart"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/hugehxxxxxxxxxdp" >
+    </lecho.lib.hellocharts.view.PieChartView>
+
+
+</LinearLayout>

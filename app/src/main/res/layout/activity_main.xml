@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.DrawerLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/drawer_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+    <LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/activity_main"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context="tqm.bianfeng.com.xinanproject.MainActivity">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/hugehdp"
+            android:background="@color/colorPrimary"
+            android:fitsSystemWindows="true"
+            android:gravity="center_vertical"
+            android:minHeight="@dimen/mediumhdp"
+            android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+            app:popupTheme="@style/ThemeOverlay.AppCompat.Light">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginBottom="@dimen/tinymdp"
+                    android:adjustViewBounds="true"
+                    android:gravity="center_horizontal"
+                    android:layout_centerInParent="true"
+                    android:paddingBottom="@dimen/smallmdp"
+                    android:paddingTop="@dimen/smallmdp"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/ic_xinan_logo"
+                    />
+                <ImageView
+                    android:id="@+id/open_drawer_img"
+                    android:layout_width="@dimen/smallhdp"
+                    android:layout_height="@dimen/smallhdp"
+                    android:src="@drawable/ic_zxing"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentBottom="true"
+                    android:layout_margin="@dimen/mediummxdp"
+                    android:background="?android:selectableItemBackground"
+                    android:clickable="true"
+                    />
+
+            </RelativeLayout>
+        </android.support.v7.widget.Toolbar>
+
+        <FrameLayout
+            android:id="@+id/main_frag"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+
+        </FrameLayout>
+        <com.ashokvarma.bottomnavigation.BottomNavigationBar
+            android:id="@+id/bottomBar"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:minHeight="55dp"
+            android:layout_alignParentBottom="true"
+            android:paddingTop="@dimen/tinymdp"
+            android:layout_marginBottom="@dimen/bottomBarMargin"
+            >
+
+        </com.ashokvarma.bottomnavigation.BottomNavigationBar>
+
+    </LinearLayout>
+    <!-- 抽屉内容 -->
+    <!--<FrameLayout-->
+        <!--android:id="@+id/drawer_content"-->
+        <!--android:layout_width="@dimen/drawer_width"-->
+        <!--android:layout_height="match_parent"-->
+        <!--android:layout_gravity="start"-->
+        <!--android:background="@color/white"-->
+        <!--android:clickable="true"-->
+        <!--/>-->
+</android.support.v4.widget.DrawerLayout>
+

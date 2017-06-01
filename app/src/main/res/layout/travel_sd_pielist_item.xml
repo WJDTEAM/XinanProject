@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="horizontal"
+              android:layout_width="match_parent"
+              android:gravity="center"
+              android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/name_txt"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/tinymdp"
+        android:text="河南"
+        android:gravity="center_vertical|right"
+        android:textColor="@color/font_black_2"
+        android:textSize="@dimen/smallsp"
+
+        />
+    <View
+        android:id="@+id/color_view"
+        android:layout_width="@dimen/mediummdp"
+        android:layout_height="@dimen/mediummdp"
+        android:background="@color/colorPrimary"
+        />
+    <TextView
+        android:id="@+id/proportion_txt"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/tinymdp"
+        android:gravity="center_vertical"
+        android:text="23%"
+        android:textColor="@color/red"
+        android:textSize="@dimen/smallsp"
+        />
+
+
+</LinearLayout>

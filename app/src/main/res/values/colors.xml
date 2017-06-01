@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#33abff</color>
+    <color name="colorPrimaryDark">#18a0ff</color>
+    <color name="colorAccent">#FF4081</color>
+
+
+    <color name="whitesmoke">#f4f4f4</color> <!-- 烟白色 -->
+    <color name="transparent">#50000000</color> <!-- 半透明 -->
+    <color name="max_transparent">#00000000</color> <!-- 全透明 -->
+    <color name="black">#444444</color>
+    <color name="gary_dark">#979797</color> <!-- 深灰色 -->
+
+    <color name="transparent_green">#5052b339</color> <!-- 半透明 -->
+    <color name="more_transparent_green">#902e8618</color> <!-- 半透明 -->
+    <color name="white">#ffffff</color>
+    <color name="gray_light">#EBEDF0</color>
+    <color name="red">#ee0000</color>
+
+    <color name="gary">#cecece</color> <!-- 灰色 -->
+    <!-- 边框 -->
+    <!-- 遮罩颜色 -->
+
+    <!-- 预约背景黄 -->
+    <color name="orange_light">#ffb204</color> <!-- 亮橘黄 -->
+    <color name="orange_dark">#eaa300</color> <!-- 暗橘黄 -->
+
+    <color name="bottom_img">#838282</color> <!--底部图标色 -->
+
+
+    <!-- material design black font color -->
+    <color name="font_black_1">#666666</color>
+    <color name="font_black_2">#999999</color>
+    <color name="font_black_5">#bdbdbd</color>
+    <color name="font_black_6">#e0e0e0</color>
+    <color name="font_black_7">#fafafa</color>
+
+    <!-- divider -->
+
+    <!--filter-->
+    <color name="gray_text">#909497</color>
+    <color name="patrol_finish_blue">#44B2FE</color>
+    <color name="blue_text">#3cafff</color>
+    <color name="jd_gray">#EFF2F5</color>
+
+    <color name="black_semi_transparent">#B2000000</color>
+    <color name="background">#e5e5e5</color>
+    <color name="half_black">#808080</color>
+    <color name="white_pressed">#f1f1f1</color>
+    <color name="pink">#e91e63</color>
+    <color name="pink_pressed">#ec407a</color>
+    <color name="blue_semi_transparent">#805677fc</color>
+    <color name="blue_semi_transparent_pressed">#80738ffe</color>
+    <color name="pink_less">#ffd8da</color>
+    <color name="message_bg_red">#b4e72020</color>
+    <color name="hot_bg">#4E8DED</color>
+
+    <color name="progressBg">#259b24 </color>
+    <color name="progress">#ff9800  </color>
+    <!--亮红-->
+    <color name="light_rad">#e51c23   </color>
+
+    <!--//    左边一列-->
+    <!--//    #00bcd4-->
+    <!--//    #ff9800-->
+    <!--//    #9c27b0-->
+    <!--//    #259b24-->
+    <!--//-->
+    <!--//            右边一列-->
+    <!--//    #03a9f4-->
+    <!--//    #cddc39-->
+    <!--//    #e51c23-->
+    <!--//    #673ab7-->
+    <color name="travelcoler1">#00bcd4</color>
+    <color name="travelcoler2">#03a9f4</color>
+    <color name="travelcoler3">#ff9800</color>
+    <color name="travelcoler4">#cddc39</color>
+    <color name="travelcoler5">#9c27b0</color>
+    <color name="travelcoler6">#e51c23</color>
+    <color name="travelcoler7">#259b24</color>
+    <color name="travelcoler8">#673ab7</color>
+
+    <!--上报数 立案数 结案数-->
+    <!--红：e51c23-->
+    <!--黄：ff9800-->
+    <!--绿：259b24-->
+    <!--蓝：03a9f4-->
+    <color name="chengguan_red">#e51c23</color>
+    <color name="chengguan_yellow">#ff9800</color>
+    <color name="chengguan_green">#259b24</color>
+    <color name="chengguan_blue">#03a9f4</color>
+
+    <!--头部logo底草绿色：#a9cd55-->
+    <color name="ep_green">#a9cd55</color>
+
+    <!--头部环保数据字体字：#868a52-->
+    <color name="ep_font_color">#868a52</color>
+    <!--菜单切换处背景草绿色：#a9cd55-->
+    <color name="ep_button_color">#868a52</color>
+    <!--菜单切换处选中时，白底草绿字体色：#80964a-->
+    <color name="ep_button_text_color">#80964a</color>
+    <!--桔黄色：#ff9800-->
+    <color name="ep_orange">#ff9800</color>
+    <color name="ep_water_top_title_bg">#FFA2D4D3</color>
+
+    <!--智慧旅游-基础设施统计-->
+    <!--A级景区#e51c23 亮红-->
+    <!--宾馆 #00bcd4 青蓝-->
+    <!--旅行社 #ff9800 桔色-->
+
+        <!--热点新闻 #673ab7 紫蓝-->
+    <color name="HOT_NEWS">#673ab7</color>
+        <!--中国搜索  #e51c23 紫色-->
+    <color name="CHINA_SEARCH">#e51c23</color>
+       <!--旅游推荐  #eb6100   亮红-->
+    <color name="RECOMMENDATION">#eb6100</color>
+        <!--营养健康  #259b24 草绿-->
+    <color name="NUTRITION">#259b24</color>
+
+    <!--新安旅游  #ff9800 桔色-->
+    <!--平安城市  #00bcd4 青蓝-->
+    <!--智慧城管  #03a9f4 蓝-->
+    <color name="chengguan_bg">#03a9f4</color>
+    <!--智慧环保  #cddc39 土黄-->
+    <color name="huanbao_bg">#cddc39</color>
+    <!--智慧矿山  #673ab7 紫蓝-->
+    <color name="kuangshan_bg">#673ab7</color>
+
+    <!--河南 #673ab7 紫蓝-->
+    <!--河北 #00bcd4 青蓝-->
+    <!--陕西 #9c27b0 紫色-->
+    <!--湖北 #cddc39 土黄-->
+    <!--湖南 #1352e2 深蓝-->
+    <!--广东 #03a9f4 天蓝-->
+    <!--广西 #fff100  黄-->
+    <!--山东 #259b24 草绿-->
+    <!--山西 #e51c23 亮红-->
+    <!--其他 #ff9800 桔色-->
+
+</resources>

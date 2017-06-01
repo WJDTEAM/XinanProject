@@ -1,0 +1,291 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/hugehdp"
+        android:background="@color/ep_green"
+        android:fitsSystemWindows="true"
+        android:gravity="center_vertical"
+        android:minHeight="@dimen/mediumhdp"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginRight="@dimen/mediumhdp">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_centerInParent="true"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="@dimen/tinymdp"
+                android:adjustViewBounds="true"
+                android:gravity="center_horizontal"
+                android:paddingBottom="@dimen/smallmdp"
+                android:paddingTop="@dimen/smallmdp"
+                android:scaleType="fitXY"
+                android:src="@drawable/ic_ep_logo"
+                />
+        </RelativeLayout>
+    </android.support.v7.widget.Toolbar>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <com.flaviofaria.kenburnsview.KenBurnsView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:adjustViewBounds="true"
+                android:src="@drawable/ic_ep_top_bg" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/hugehdp"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="@dimen/bigmdp"
+                    android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                    android:layout_marginTop="@dimen/bigmdp"
+                    android:adjustViewBounds="true"
+                    android:src="@drawable/ic_aqi_leaf"
+
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:paddingLeft="@dimen/smallmdp"
+                    android:text="59"
+                    android:textColor="@color/ep_font_color"
+                    android:textSize="@dimen/mediumxsp"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="@dimen/bigmdp"
+                    android:layout_marginLeft="@dimen/smallmdp"
+                    android:layout_marginTop="@dimen/bigmdp"
+                    android:background="@drawable/radio_orange_bg_shap"
+                    android:gravity="center"
+                    android:paddingLeft="@dimen/tinymdp"
+                    android:paddingRight="@dimen/tinymdp"
+                    android:text="良"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/mediumsp"
+                    />
+
+                <View
+                    android:layout_width="0.5dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="@dimen/bigmdp"
+                    android:layout_marginLeft="@dimen/mediummdp"
+                    android:layout_marginTop="@dimen/bigmdp"
+                    android:background="@color/ep_green"/>
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="@dimen/bigmdp"
+                    android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                    android:layout_marginTop="@dimen/bigmdp"
+                    android:adjustViewBounds="true"
+                    android:src="@drawable/ic_wind"
+
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:paddingLeft="@dimen/smallmdp"
+                    android:text="西南风四级"
+                    android:textColor="@color/ep_font_color"
+                    android:textSize="@dimen/mediumsp"
+                    />
+
+                <View
+                    android:layout_width="0.5dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="@dimen/bigmdp"
+                    android:layout_marginLeft="@dimen/mediummdp"
+                    android:layout_marginTop="@dimen/bigmdp"
+                    android:background="@color/ep_green"/>
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:paddingLeft="@dimen/smallmdp"
+                    android:text="在全市排名\n第1名"
+                    android:textColor="@color/ep_font_color"
+                    android:textSize="@dimen/smallsp"
+                    />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/tinyxhdp"
+                android:orientation="horizontal"
+                >
+                <LinearLayout
+                    android:id="@+id/ep_air_lin"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:background="@drawable/ep_botton_sel"
+                    android:layout_marginLeft="@dimen/tinymdp">
+
+                    <ImageView
+                        android:layout_width="@dimen/bigmdp"
+                        android:layout_height="@dimen/bigmdp"
+                        android:clickable="true"
+                        android:src="@drawable/ep01"
+                        android:background="@drawable/ic_ep_write_circle_bg"
+                        android:padding="@dimen/tinymdp"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="@dimen/tinymdp"
+                        />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:text="空气质量"
+                        android:lines="1"
+                        android:textColor="@drawable/ep_text_color_selector"
+                        android:textSize="@dimen/smallsp"
+                        />
+
+                </LinearLayout>
+                <LinearLayout
+                    android:id="@+id/ep_detection_lin"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:background="@drawable/ep_botton_sel"
+                    android:layout_marginLeft="@dimen/tinymdp">
+
+                    <ImageView
+                        android:layout_width="@dimen/bigmdp"
+                        android:layout_height="@dimen/bigmdp"
+                        android:clickable="true"
+                        android:src="@drawable/ep02"
+                        android:background="@drawable/ic_ep_write_circle_bg"
+                        android:padding="@dimen/tinymdp"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="@dimen/tinymdp"
+                        />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:text="监测站"
+                        android:textColor="@drawable/ep_text_color_selector"
+                        android:textSize="@dimen/smallsp"
+                        />
+
+                </LinearLayout>
+                <LinearLayout
+                    android:id="@+id/ep_pollution_lin"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:background="@drawable/ep_botton_sel"
+                    android:layout_marginLeft="@dimen/tinymdp">
+
+                    <ImageView
+                        android:layout_width="@dimen/bigmdp"
+                        android:layout_height="@dimen/bigmdp"
+                        android:clickable="true"
+                        android:src="@drawable/ep03"
+                        android:background="@drawable/ic_ep_write_circle_bg"
+                        android:padding="@dimen/tinymdp"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="@dimen/tinymdp"
+                        />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:text="污染源"
+                        android:textColor="@drawable/ep_text_color_selector"
+                        android:textSize="@dimen/smallsp"
+                        />
+
+                </LinearLayout>
+                <LinearLayout
+                    android:id="@+id/ep_water_lin"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:background="@drawable/ep_botton_sel"
+                    android:layout_marginLeft="@dimen/tinymdp"
+                    android:layout_marginRight="@dimen/tinymdp">
+                    <ImageView
+                        android:layout_width="@dimen/bigmdp"
+                        android:layout_height="@dimen/bigmdp"
+                        android:clickable="true"
+                        android:src="@drawable/ep04"
+                        android:background="@drawable/ic_ep_write_circle_bg"
+                        android:padding="@dimen/tinymdp"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="@dimen/tinymdp"
+                        />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:text="水质量"
+                        android:textColor="@drawable/ep_text_color_selector"
+                        android:textSize="@dimen/smallsp"
+                        />
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <FrameLayout
+                android:id="@+id/main_frag"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+            </FrameLayout>
+
+
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="@dimen/hugehxxxxdp"
+              android:id="@+id/bg_lin"
+              android:background="@color/travelcoler6"
+              android:layout_marginTop="@dimen/mediummdp">
+
+
+        <LinearLayout
+            android:id="@+id/click_lin"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:background="?android:selectableItemBackground"
+            android:clickable="true"
+            >
+
+            <ImageView
+                android:id="@+id/travel_image"
+                android:layout_width="@dimen/smallhdp"
+                android:layout_height="@dimen/smallhdp"
+                android:adjustViewBounds="true"
+                android:src="@drawable/travel01"/>
+            <TextView
+                android:id="@+id/travel_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="景区饱和度"
+                android:gravity="center"
+                android:textColor="@color/white"
+                android:textSize="@dimen/mediumsp"
+                android:paddingTop="@dimen/smallmdp"
+                />
+
+
+        </LinearLayout>
+
+</LinearLayout>

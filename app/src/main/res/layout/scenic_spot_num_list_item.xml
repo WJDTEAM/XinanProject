@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content">
+
+    <tqm.bianfeng.com.xinanproject.CustomView.MyHScrollView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/hugehxxxxxdp"
+        android:paddingLeft="@dimen/smallmdp"
+        android:paddingRight="@dimen/smallmdp"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/hugehxxxxxdp"
+            android:orientation="horizontal"
+            >
+
+            <lecho.lib.hellocharts.view.LineChartView
+                android:id="@+id/horizontalchart"
+                android:layout_width="1600dp"
+                android:layout_height="@dimen/hugehxxxxxdp"
+                android:paddingLeft="@dimen/smallmdp">
+            </lecho.lib.hellocharts.view.LineChartView>
+        </LinearLayout>
+    </tqm.bianfeng.com.xinanproject.CustomView.MyHScrollView>
+
+   <TextView
+       android:id="@+id/scenic_spot_name_txt"
+       android:layout_width="match_parent"
+       android:layout_height="@dimen/tinyhdp"
+       android:background="@color/white"
+       android:gravity="center"
+       android:textColor="@color/font_black_2"
+       android:textSize="@dimen/smallsp"
+       android:text="龙潭大峡谷"
+       />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/smallmdp"
+        android:background="@color/gray_light"/>
+
+
+</LinearLayout>
