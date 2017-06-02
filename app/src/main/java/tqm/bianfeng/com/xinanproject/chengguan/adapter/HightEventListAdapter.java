@@ -5,6 +5,7 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import java.util.List;
@@ -12,14 +13,14 @@ import java.util.List;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import rx.subscriptions.CompositeSubscription;
+import tqm.bianfeng.com.xinanproject.CustomView.CircleView;
 import tqm.bianfeng.com.xinanproject.R;
 
 /**
- * Created by johe on 2017/5/19.
- * 月事件统计gridadapter
+ * Created by johe on 2017/6/1.
  */
 
-public class MonthEventAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
+public class HightEventListAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
 
 
 
@@ -29,22 +30,11 @@ public class MonthEventAdapter extends RecyclerView.Adapter<RecyclerView.ViewHol
     private MyItemClickListener mItemClickListener;
     CompositeSubscription compositeSubscription;
 
-    List<Integer> num;
-
-    public void setNum(List<Integer> num) {
-        this.num = num;
-    }
-
-    int[] color = {R.color.travelcoler1, R.color.travelcoler2, R.color.travelcoler3, R.color.travelcoler4, R.color.ep_button_text_color
-            , R.color.travelcoler5, R.color.travelcoler6, R.color.travelcoler7, R.color.travelcoler8, R.color.pink_pressed};
-
-    String[] name = {"突发事件", "街面秩序", "宣传广告", "施工管理", "市容环境", "绿化设施", "公共设施", "交通设施", "市容设施", "其他设施"};
-
     public String getDataItem(int position) {
         return datas == null ? null : datas.get(position);
     }
 
-    public MonthEventAdapter(Context mContext, List<String> mDatas) {
+    public HightEventListAdapter(Context mContext, List<String> mDatas) {
         this.mContext = mContext;
         this.datas = mDatas;
         mLayoutInflater = LayoutInflater.from(mContext);
@@ -57,7 +47,7 @@ public class MonthEventAdapter extends RecyclerView.Adapter<RecyclerView.ViewHol
     }
 
     public int getLayout() {
-        return R.layout.month_event_list_item;
+        return R.layout.hight_event_list_item;
     }
 
     @Override
@@ -81,9 +71,14 @@ public class MonthEventAdapter extends RecyclerView.Adapter<RecyclerView.ViewHol
     @Override
     public void onBindViewHolder(RecyclerView.ViewHolder holder, final int position) {
         ViewHolder mHolder = (ViewHolder) holder;
-        mHolder.eventNameTxt.setText(name[position]);
-        mHolder.eventNumTxt.setText(num.get(position) + "%");
-        mHolder.eventColorView.setBackgroundResource(color[position]);
+        mHolder.numTxt.setText(position+1+"");
+        mHolder.numTxt.setBackgroundColor(mContext.getResources().getColor(R.color.ep_orange));
+        mHolder.hightEventLin.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                mItemClickListener.OnClickListener(position);
+            }
+        });
     }
 
 
@@ -97,12 +92,16 @@ public class MonthEventAdapter extends RecyclerView.Adapter<RecyclerView.ViewHol
     }
 
     static class ViewHolder extends RecyclerView.ViewHolder {
-        @BindView(R.id.event_color_view)
-        View eventColorView;
-        @BindView(R.id.event_num_txt)
-        TextView eventNumTxt;
-        @BindView(R.id.event_name_txt)
-        TextView eventNameTxt;
+        @BindView(R.id.num_txt)
+        CircleView numTxt;
+        @BindView(R.id.hight_event_time_txt)
+        TextView hightEventTimeTxt;
+        @BindView(R.id.hight_event_type_txt)
+        TextView hightEventTypeTxt;
+        @BindView(R.id.hight_event_add_txt)
+        TextView hightEventAddTxt;
+        @BindView(R.id.hight_event_lin)
+        LinearLayout hightEventLin;
 
         ViewHolder(View view) {
             super(view);

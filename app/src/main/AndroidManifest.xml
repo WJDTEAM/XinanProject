@@ -140,6 +140,22 @@
 
 
         </activity>
+        <!--今日高发事件列表-->
+        <activity android:name=".chengguan.HightEventListActivity"
+                  android:launchMode="singleTask"
+                  android:screenOrientation="portrait"
+                  android:windowSoftInputMode="adjustPan|stateHidden">
+
+
+        </activity>
+        <!--事件详情-->
+        <activity android:name=".chengguan.HightEventItemActivity"
+                  android:launchMode="singleTask"
+                  android:screenOrientation="portrait"
+                  android:windowSoftInputMode="adjustPan|stateHidden">
+
+
+        </activity>
         <!--智慧矿山-->
         <activity android:name=".Kuangshan.KuangShanActivity"
                   android:launchMode="singleTask"

@@ -5,6 +5,7 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import java.util.ArrayList;
@@ -12,6 +13,7 @@ import java.util.List;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
+import lecho.lib.hellocharts.listener.ColumnChartOnValueSelectListener;
 import lecho.lib.hellocharts.model.Axis;
 import lecho.lib.hellocharts.model.Column;
 import lecho.lib.hellocharts.model.ColumnChartData;
@@ -28,14 +30,15 @@ import tqm.bianfeng.com.xinanproject.R;
 public class HightEventAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
 
 
+
     private Context mContext;
     private List<String> datas;
     private final LayoutInflater mLayoutInflater;
     private MyItemClickListener mItemClickListener;
     CompositeSubscription compositeSubscription;
 
-    int [] color={R.color.chengguan_red,R.color.chengguan_yellow,R.color.chengguan_green};
-    String[] name = {"道路破损", "乱堆物堆料", "非法广告","私搭乱建","违规户外广告"};
+    int[] color = {R.color.chengguan_red, R.color.chengguan_yellow, R.color.chengguan_green};
+    String[] name = {"道路破损", "乱堆物堆料", "非法广告", "私搭乱建", "违规户外广告"};
 
     public String getDataItem(int position) {
         return datas == null ? null : datas.get(position);
@@ -79,8 +82,25 @@ public class HightEventAdapter extends RecyclerView.Adapter<RecyclerView.ViewHol
     public void onBindViewHolder(RecyclerView.ViewHolder holder, final int position) {
         ViewHolder mHolder = (ViewHolder) holder;
         mHolder.eventNameTxt.setText(name[position]);
-        int num= initChrt(mHolder.chart);
-        mHolder.eventNumTxt.setText(num+"");
+        int num = initChrt(mHolder.chart);
+        mHolder.eventNumTxt.setText(num + "");
+        mHolder.hightEventLin.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                mItemClickListener.OnClickListener(position);
+            }
+        });
+        mHolder.chart.setOnValueTouchListener(new ColumnChartOnValueSelectListener() {
+            @Override
+            public void onValueSelected(int columnIndex, int subcolumnIndex, SubcolumnValue value) {
+                mItemClickListener.OnClickListener(position);
+            }
+
+            @Override
+            public void onValueDeselected() {
+
+            }
+        });
     }
 
     public int initChrt(ColumnChartView lineChartView) {
@@ -96,13 +116,13 @@ public class HightEventAdapter extends RecyclerView.Adapter<RecyclerView.ViewHol
         List<Column> columns = new ArrayList<Column>();
         List<SubcolumnValue> values;
 
-        int num=(int)( Math.random() * 50f);
+        int num = (int) (Math.random() * 50f);
 
         for (int i = 0; i < numColumns; ++i) {
 
             values = new ArrayList<SubcolumnValue>();
             for (int j = 0; j < numSubcolumns; ++j) {
-                values.add(new SubcolumnValue(num/(i+1) + 5,mContext.getResources().getColor( color[i])));
+                values.add(new SubcolumnValue(num / (i + 1) + 5, mContext.getResources().getColor(color[i])));
             }
 
             Column column = new Column(values);
@@ -149,6 +169,9 @@ public class HightEventAdapter extends RecyclerView.Adapter<RecyclerView.ViewHol
         TextView eventNameTxt;
         @BindView(R.id.chart)
         ColumnChartView chart;
+        @BindView(R.id.hight_event_lin)
+        LinearLayout hightEventLin;
+
         ViewHolder(View view) {
             super(view);
             ButterKnife.bind(this, view);

@@ -37,12 +37,9 @@ public class TravelTouristsNumListActivity extends BaseActivity {
         setToolbar(toolbar, "景区流量", true,R.color.ep_orange);
         toolbar.setBackgroundResource(R.color.ep_orange);
         datas=new ArrayList<>();
-        datas.add("ss");
-        datas.add("dd");
-        datas.add("pp");
-        datas.add("ss");
-        datas.add("dd");
-        datas.add("pp");
+        for (int i = 0; i < 6; ++i) {
+            datas.add(i+"");
+        }
         initList();
     }
 

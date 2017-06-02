@@ -1,5 +1,6 @@
 package tqm.bianfeng.com.xinanproject.chengguan;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.RecyclerView;
@@ -73,27 +74,36 @@ public class ChengGuanActivity extends BaseActivity {
 
     public void initHightEvent() {
         List<String> datas = new ArrayList<>();
-        datas.add("ss");
-        datas.add("ss");
-        datas.add("ss");
-        datas.add("ss");
-        datas.add("ss");
+        for (int i = 0; i < 5; ++i) {
+            datas.add("ss");
+        }
         hightEventAdapter = new HightEventAdapter(this, datas);
+        hightEventAdapter.setOnItemClickListener(new HightEventAdapter.MyItemClickListener() {
+            @Override
+            public void OnClickListener(int position) {
+                //跳转高发事件页面
+                startActivity(new Intent(ChengGuanActivity.this,HightEventListActivity.class));
+
+            }
+        });
         highIncidenceEventList.setLayoutManager(new GridLayoutManager(this, 2));
         highIncidenceEventList.setAdapter(hightEventAdapter);
     }
 
     //饼状图
     public void initPieChat() {
-        int numValues = 4;
-        int[] color = {R.color.chengguan_red, R.color.chengguan_yellow, R.color.chengguan_green, R.color.chengguan_blue};
+        int numValues = 10;
+        int[] color = {R.color.travelcoler1, R.color.travelcoler2, R.color.travelcoler3, R.color.travelcoler4,R.color.ep_button_text_color
+        ,R.color.travelcoler5,R.color.travelcoler6,R.color.travelcoler7,R.color.travelcoler8,R.color.pink_pressed};
+        String[] name = {"突发事件", "街面秩序", "宣传广告", "施工管理", "市容环境", "绿化设施", "公共设施", "交通设施", "市容设施", "其他设施"};
 
         List<Integer> num = new ArrayList<>();
         List<SliceValue> values = new ArrayList<SliceValue>();
         for (int i = 0; i < numValues; ++i) {
-            num.add((int) (Math.random() * 30) + 15);
+            num.add((int) (Math.random() * 10) + 5);
             SliceValue sliceValue = new SliceValue(
                     num.get(i), getResources().getColor(color[i]));
+            sliceValue.setLabel(name[i]+ num.get(i));
             values.add(sliceValue);
         }
         PieChartData piedata = new PieChartData(values);
@@ -101,17 +111,18 @@ public class ChengGuanActivity extends BaseActivity {
         piedata.setHasLabelsOnlyForSelected(false);
         piedata.setHasLabelsOutside(true);
         piedata.setHasCenterCircle(true);
-
+        piedata.setValueLabelTextSize(10);
         monthEventPieChart.setPieChartData(piedata);
         monthEventPieChart.setCircleFillRatio(0.7f);//设置放大缩小范围
+
+
         List<String> datas = new ArrayList<>();
-        datas.add("ss");
-        datas.add("ss");
-        datas.add("ss");
-        datas.add("ss");
+        for (int i = 0; i <10; ++i) {
+            datas.add(i+10+"");
+        }
         monthEventAdapter = new MonthEventAdapter(this, datas);
         monthEventAdapter.setNum(num);
-        monthEventList.setLayoutManager(new GridLayoutManager(this, 2));
+        monthEventList.setLayoutManager(new GridLayoutManager(this, 4));
         monthEventList.setAdapter(monthEventAdapter);
 
     }
